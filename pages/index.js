@@ -9,7 +9,14 @@ const Title = styled.h1`
 export default function Home() {
   return (
   <>
-    <NavBar/>
+    <Container>
+      <NavBar/>
+    </Container>
   </>
   );
 }
+
+const Container = styled.div`
+  background: #262833;
+  height: 100vh;
+`
