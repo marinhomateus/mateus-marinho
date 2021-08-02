@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Typical from "react-typical";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
       <Logo href="">
@@ -13,7 +13,7 @@ const NavBar = () => {
           wrapper="yes"
         />
       </Logo>
-      <Hamburguer onclick={() => setIsOpen (!isOpen)}>
+      <Hamburguer onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />
@@ -33,7 +33,12 @@ const Nav = styled.div`
   align-items: center;
   flex-wrap: wrap;
   background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
+
 const Hamburguer = styled.div`
   flex-direction: column;
   display: none;
