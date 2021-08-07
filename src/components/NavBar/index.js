@@ -19,8 +19,8 @@ const NavBar = () => {
         <span />
       </Hamburguer>
       <Menu isOpen={isOpen}>
-        <MenuLink href>Projects</MenuLink>
-        <MenuLink href>Contact</MenuLink>
+        <MenuLink href="#projects">Projects</MenuLink>
+        <MenuLink href="#contact">Contact</MenuLink>
       </Menu>
     </Nav>
   );
@@ -87,6 +87,7 @@ const MenuLink = styled.a`
 `;
 
 const Logo = styled.a`
+  
   padding: 1rem 0;
   text-decoration: none;
   color: #7e8ce0;
