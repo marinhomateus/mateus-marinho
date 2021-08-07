@@ -44,17 +44,22 @@ export const Menu = styled.div`
   position: relative;
 
   .about {
-      margin-right: 300px;
+    margin-right: 300px;
   }
 
   .contact {
-      //border: 3px solid ${(props) => props.theme.colors.secondary1};
-      background: ${(props) => props.theme.colors.secondary1};
+    //border: 3px solid ${(props) => props.theme.colors.secondary1};
+    background: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.primary1};
+    border-radius: 25px;
+    display: block;
+    padding: 12px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #ffa48e;
       color: ${(props) => props.theme.colors.primary1};
-      border-radius: 25px;
-      display: block;
-      padding: 12px;
-      font-weight: bold;
+    }
   }
 
   @media (max-width: 860px) {
