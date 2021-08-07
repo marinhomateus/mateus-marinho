@@ -32,7 +32,7 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: #000000;
+  background: ${props => props.theme.colors.background1};
   position: absolute;
   top: 0;
   left: 0;
@@ -47,7 +47,7 @@ const Hamburguer = styled.div`
   span {
     height: 2px;
     width: 25px;
-    background: #7e8ce0;
+    background: ${props => props.theme.colors.text};
     margin: 4px;
     border-radius: 5px;
   }
@@ -77,9 +77,9 @@ const MenuLink = styled.a`
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  color: #7e8ce0;
+  color: ${props => props.theme.colors.text};
   transition: all 0.3s ease-in;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 
   &:hover {
     color: #FFA48E
@@ -90,7 +90,7 @@ const Logo = styled.a`
   
   padding: 1rem 0;
   text-decoration: none;
-  color: #7e8ce0;
+  color: ${props => props.theme.colors.text};
   font-weight: 800;
   font-size: 1.7rem;
 `;

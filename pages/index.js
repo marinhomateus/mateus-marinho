@@ -17,6 +17,6 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  background: #262833;
+  background: ${props => props.theme.colors.background2};
   height: 100vh;
 `

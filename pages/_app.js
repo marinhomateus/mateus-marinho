@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #262833;
+    background: primary;
     font-family: sans-serif;
   }
 
@@ -27,8 +27,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
+  fonts: {
+    title: "Space Grotesk, sans-serif",
+    main: "Space Grotesk, sans-serif"
+  },
   colors: {
-    primary: "#262833",
+    primary1: "#3F4F59",
+    secondary1: "#FFA48E",
+    background1: "#14141b",
+    text: "#A8B6BF",
+    button: "hsl(205.1,100%,36.1%)",
+    background2: "#2F3940",
   },
 };
 
