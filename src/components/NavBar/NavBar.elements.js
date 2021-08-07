@@ -32,7 +32,7 @@ export const Hamburguer = styled.div`
     border-radius: 5px;
   }
 
-  @media (max-width: 860px) {
+  @media (max-width: 1060px) {
     display: flex;
   }
 `;
@@ -45,6 +45,10 @@ export const Menu = styled.div`
 
   .about {
     margin-right: 300px;
+
+    @media (max-width: 1060px) {
+        margin: 0 auto;
+    }
   }
 
   .contact {
@@ -60,9 +64,13 @@ export const Menu = styled.div`
       background-color: #ffa48e;
       color: ${(props) => props.theme.colors.primary1};
     }
+
+    @media (max-width: 1060px) {
+        margin-bottom: 0.9rem;
+    }
   }
 
-  @media (max-width: 860px) {
+  @media (max-width: 1060px) {
     overflow: hidden;
     flex-direction: column;
     width: 100%;
