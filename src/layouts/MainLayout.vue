@@ -9,8 +9,8 @@
         <v-menu v-if="more.length" bottom left>
           <template v-slot:activator="{ on, attrs }">
             <v-btn text class="align-self-center mr-4" v-bind="attrs" v-on="on">
-              <v-icon right>
-                mdi-menu-down
+              <v-icon>
+                mdi-menu
               </v-icon>
             </v-btn>
           </template>
