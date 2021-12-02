@@ -1,7 +1,41 @@
-# Vue 3 + Vite
+# Pintrest UI
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Description
+Hello Everyone! 
 
-## Recommended IDE Setup
+Just thought I would try a full session of coding and show you what my workflow looks like for front end development. In this project I took a simple clean redesign of Pintrest that I found online on uplabs and then recreated it with Vuetify. As you can see the material design framework is really powerful and can speed up your workflow significantly. 
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+The end result is what you see in this project [here](https://uzirthapa.github.io/facebook-ui/dist/)
+
+Please check out the [YouTube Video] () as well if you would like!
+
+## Links to Resources
+
+[YouTube]()
+
+[Vuejs](https://vuejs.org/)
+
+[Vuetify](https://vuetifyjs.com/en/)
+
+[Facebook](https://www.facebook.com/)
+
+[Facebook UI](https://dribbble.com/shots/5905328-Facebook-Concept-Home) Shoutout to Yi Li
+
+[Facebook Emojis](https://emojipedia.org/messenger/1.0/)
+
+[Avatar Generator](https://avatarmaker.com/)
+
+
+## Project setup
+```
+yarn install
+yarn run serve
+yarn run build
+yarn run test
+yarn run lint
+```
+
+
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
