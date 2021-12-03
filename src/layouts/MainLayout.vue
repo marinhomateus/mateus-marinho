@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar flat height="50" app color="white">
+    <v-app-bar flat height="50" app dark color="#2F3437">
       <v-layout align-center>
         <v-icon src="@assets/logo.png"> </v-icon>
         <v-flex>
           Mateus Marinho
         </v-flex>
-        <v-menu v-if="more.length" bottom left>
+        <v-menu v-if="more.length" transition="slide-y-transition" bottom left>
           <template v-slot:activator="{ on, attrs }">
             <v-btn text class="align-self-center mr-4" v-bind="attrs" v-on="on">
               <v-icon>
