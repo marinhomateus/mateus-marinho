@@ -1,122 +1,171 @@
 <template>
-  <v-parallax
-    dark
-    style="height: 80vh"
-    src="https://source.unsplash.com/random/?dark"
-  >
-    <v-row align="center" justify="center">
-      <v-col cols="6" class="pa-6 font-weight-bold py-16">
-        <h2 class="display-3">
-          Hi, 🤝
-          <br />
-          I am <strong>Mateus Marinho</strong>
-        </h2>
-        <br />
-        <v-subheader dark>💻 A technology enthusiast and lover. 👾</v-subheader>
-        <br />
-        <v-row class="mt-16">
-          <v-chip
-            class="px-4 ma-3"
-            href="https://www.linkedin.com/in/mateus-marinho-5969231b9/"
-            color="#8acdea"
-          >
-            <v-icon size="20">mdi-linkedin</v-icon>
-          </v-chip>
-          <v-chip
-            class="px-4 ma-3"
-            href="https://github.com/marinhomateus"
-            dark
-            color="#6a66a3"
-          >
-            <v-icon size="20">mdi-github</v-icon>
-          </v-chip>
+  <div>
+    <section>
+      <v-parallax style="height: 100vh">
+        <v-row align="center" justify="center">
+          <v-col cols="6" class="pa-1 font-weight-bold py-16">
+            <h2 class="display-3">
+              Hi, 🤝
+              <br />
+              I am <strong>Mateus Marinho</strong>
+            </h2>
+            <br />
+            <v-subheader dark
+              >💻 A technology enthusiast and lover. 👾</v-subheader
+            >
+            <br />
+            <v-row class="mt-16">
+              <v-chip
+                class="px-4 ma-3"
+                href="https://www.linkedin.com/in/mateus-marinho-5969231b9/"
+                dark
+                color="#3d5a80"
+              >
+                <v-icon size="20">mdi-linkedin</v-icon>
+              </v-chip>
+              <v-chip
+                class="px-4 ma-3"
+                href="https://github.com/marinhomateus"
+                dark
+                color="#6a66a3"
+              >
+                <v-icon size="20">mdi-github</v-icon>
+              </v-chip>
+              <v-chip
+                class="px-4 ma-3"
+                href="https://twitter.com/maetusx"
+                dark
+                color="#f4a261"
+              >
+                <v-icon size="20">mdi-twitter</v-icon>
+              </v-chip>
+            </v-row>
+            <particles-bg type="lines" :bg="true" />
+          </v-col>
         </v-row>
-      </v-col>
-    </v-row>
-  </v-parallax>
+      </v-parallax>
+    </section>
+    <section class="about-me" id="about">
+      <div
+        class="pa-10"
+        height="400"
+        background="#2F3437"
+        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+      >
+        <v-row justify="center" class="align-center">
+          <v-col lg="6" cols="6">
+            <v-card
+              class="text-center pa-6 rounded-lg"
+              color="#e1e0e0c9"
+              elevation="6"
+            >
+              <v-card-subtitle class="green--text">ABOUT ME</v-card-subtitle>
+              <h2 class="display-1 font-weight-regular">
+                Evolving in some...
+              </h2>
+              <v-btn
+                large
+                elevation="5"
+                color="pink"
+                class="white--text mt-10 px-10 py-5"
+                >Download Resume
+                <v-icon>mdi-download</v-icon>
+              </v-btn>
+            </v-card>
+          </v-col>
+          <v-col lg="6" cols="6">
+            <v-card class="pa-6 rounded-lg" color="#e1e0e0c9" elevation="6">
+              <div class="py-1" v-for="(item, index) in items" :key="index">
+                <label>{{ item.title }}</label>
+                <v-progress-linear
+                  :color="item.color"
+                  height="10"
+                  :value="item.value"
+                ></v-progress-linear>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h4 class="display-2 text-center">Portfolio</h4>
+      <v-slide-group class="pa-4" active-class="success" show-arrows>
+        <v-slide-item v-for="(slider, index) in sliders" :key="index">
+          <v-card height="250" width="250" class="mx-2">
+            <img height="100%" width="100%" :src="slider" alt="" />
+          </v-card>
+        </v-slide-item>
+      </v-slide-group>
+    </section>
+    <section class="contact-us pt-10">
+      <v-img
+        class="pt-10"
+        gradient="to bottom, rgb(166 199 156), rgb(227 227 227 / 86%)"
+        src="https://img.freepik.com/free-photo/contact-us_36325-2135.jpg?size=626&ext=jpg"
+      >
+        <v-container>
+          <h4 class="display-1 text-center mb-5">
+            I’m a designer, based in San Francisco. Currently a freelancer. You
+            can see my hobbies on @Jack-Co and some photos on me too.
+          </h4>
+          <v-divider />
+          <br />
+          <v-row>
+            <v-col cols="12" lg="6">
+              <v-card-title>DROP A LINE</v-card-title>
+              <v-form>
+                <v-text-field label="Your Name" />
+                <v-text-field label="Email" />
+                <v-text-field label="Subject" />
+                <v-textarea label="Message" />
+                <v-btn large color="green" class="white--text"
+                  >Send Message</v-btn
+                >
+              </v-form>
+            </v-col>
+            <v-col cols="12" lg="3" offset="2">
+              <v-card-title>CONTACT ME</v-card-title>
+              <v-card-text>
+                4657 Franklin Avenue, ARCH CAPE <br />
+                +361-883-3218 <br />
+                hello@jac-co.com <br />
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  large
+                  elevation="5"
+                  color="pink"
+                  class="white--text mt-10 px-10 py-5"
+                  >Download Resume
+                  <v-icon>mdi-download</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-img>
+    </section>
+  </div>
 </template>
 
 <script>
+import { ParticlesBg } from "particles-bg-vue";
 export default {
   data() {
     return {
-      items: [
-        {
-          url:
-            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bmVwYWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Valériane Dominykas",
-          occupation: "Literary agent",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1610024062303-e355e94c7a8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1554710869-95f3df6a3197?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bmVwYWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Vanessa Fearchar",
-          occupation: "Landscape gardener",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1470259078422-826894b933aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1543860856-79e478a9452b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG5lcGFsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Thandi Ségolène",
-          occupation: "Osteopath",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1474511019749-26a5a4b632b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1523512090443-2d7df8b40358?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-          name: "Travers Vitalijus",
-          occupation: "Farm worker",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1551088701-77512773d322?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fG5lcGFsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Rhisiart Chand",
-          occupation: "Midwife",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bmVwYWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Lyuba Mohini",
-          occupation: "Manicurist",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1546005035-1c047504a71a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fG5lcGFsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Arnþórr Ivanka",
-          occupation: "Undertaker",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1525550557089-27c1bfedd06c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1553521756-74004ab1e8bd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-          name: "Bride Julián",
-          occupation: "Chiropodist",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          url:
-            "https://images.unsplash.com/photo-1567761653114-6b6eb3101c79?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fG5lcGFsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          name: "Indah Valya",
-          occupation: "Fashion designer",
-          profileImageUrl:
-            "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        },
+      sliders: [
+        "https://cdn.searchenginejournal.com/wp-content/uploads/2020/01/which-web-design-platform-is-right-for-you-5e4d59fb941b9-1520x800.png",
+        "https://cdn.searchenginejournal.com/wp-content/uploads/2019/12/5-ways-seo-web-design-go-together-5e2945dd5df37.png",
+        "https://data.whicdn.com/images/350420216/original.jpg?t=1605047796",
+        "https://1zylgb20pxi7mw2sdr8i4a14-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/projectleft.jpg",
+        "https://cdn.dribbble.com/users/702789/screenshots/14012516/media/561a8b7e8cbe51c72c18f4ef0dc72676.png?compress=1&resize=400x300",
+        "https://cdn.dribbble.com/users/2399102/screenshots/15522177/media/346d890482d929610d316938e7d48629.png?compress=1&resize=400x300",
       ],
     };
   },
+  components: {
+    ParticlesBg,
+  },
 };
 </script>
-
-<style></style>

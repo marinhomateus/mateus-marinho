@@ -1,9 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar flat height="50" app dark color="#2F3437">
+    <v-app-bar flat height="45" inverted-scroll app dark color="#2F3437">
       <v-layout align-center>
-        <v-icon src="@assets/logo.png"> </v-icon>
-        <v-flex>
+        <v-flex class="ml-10">
           Mateus Marinho
         </v-flex>
         <v-menu v-if="more.length" transition="slide-y-transition" bottom left>
@@ -27,6 +26,13 @@
     <v-main>
       <home-page />
     </v-main>
+
+    <v-footer dark color="#2F3437">
+      <v-col class="text-center" cols="12">
+        {{ new Date().getFullYear() }} | Made by
+        <a href="" class="orange--text">Mateus Marinho</a>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
@@ -44,4 +50,24 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2f3437;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a9acaf;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
