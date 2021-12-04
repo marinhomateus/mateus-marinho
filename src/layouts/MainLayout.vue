@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar flat height="45" inverted-scroll app dark color="#2F3437">
+    <v-app-bar flat height="45" inverted-scroll app dark color="transparent">
       <v-layout align-center>
         <v-flex class="ml-10">
           Mateus Marinho
