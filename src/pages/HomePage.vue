@@ -27,7 +27,7 @@
                 class="px-4 ma-3"
                 href="https://github.com/marinhomateus"
                 dark
-                color="#6a66a3"
+                color="#6b705c"
               >
                 <v-icon size="20">mdi-github</v-icon>
               </v-chip>
@@ -81,6 +81,7 @@
                 elevation="5"
                 color="#6a66a3"
                 class="white--text mt-12 px-10 py-5"
+                href="#contact"
               >
                 <v-icon left>mdi-text-to-speech</v-icon>
                 contact me
@@ -135,22 +136,51 @@
       <v-img
         class="pa-10"
         src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg"
-        height="400"
+        height="800"
         gradient="to bottom, #404040, #616161"
-        style="height: 80vh"
       >
         <v-row align="center" justify="center">
           <v-col class="">
             <h4 class="display-2 text-center white--text">Projects</h4>
             <br />
             <v-divider></v-divider>
-            <v-slide-group class="pa-4" active-class="success" show-arrows>
-              <v-slide-item v-for="(slider, index) in sliders" :key="index">
-                <v-card height="250" width="250" class="mx-2">
-                  <img height="100%" width="100%" :src="slider" alt="" />
-                </v-card>
-              </v-slide-item>
-            </v-slide-group>
+            <br />
+
+            <v-card
+              elevation="15"
+              max-width="900"
+              color="#e1e0e0c9"
+              class="mx-auto"
+            >
+              <v-system-bar color="#e1e0e0c9"></v-system-bar>
+              <v-carousel
+                :continuous="true"
+                :cycle="cycle"
+                :show-arrows="true"
+                hide-delimiter-background
+                delimiter-icon="mdi-minus"
+                height="500"
+              >
+                <v-carousel-item v-for="(slide, i) in slides" :key="i">
+                  <v-sheet :color="colors[i]" height="100%" tile>
+                    <v-row class="fill-height" align="center" justify="center">
+                      <div class="text-h2">{{ slide }} Slide</div>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
+              <v-list color="#e1e0e0c9" two-line>
+                <v-list-item>
+                  <v-list-item-avatar>
+                    <v-img src="https://github.com/marinhomateus.png"></v-img>
+                  </v-list-item-avatar>
+                  <v-list-item-content>
+                    <v-list-item-title>Mateus Marinho</v-list-item-title>
+                    <v-list-item-subtitle>Author</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </v-card>
           </v-col>
         </v-row>
       </v-img>
@@ -159,53 +189,68 @@
       <v-img
         class="pa-10"
         gradient="to bottom, #616161, #757575"
+        height="800"
         src="https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
       >
-        <v-container>
-          <h4 class="display-2 text-center white--text">Contact</h4>
-          <br />
-          <v-divider></v-divider>
-          <br />
-          <h4 class="display-1 text-center white--text">
-            You can contact me by one of my social links or sending an Email.
-          </h4>
-          <v-row>
-            <v-col cols="12" md="8">
-              <v-card color="transparent" flat>
-                <v-card-title>DROP A LINE</v-card-title>
-                <v-form>
-                  <v-text-field label="Your Name" />
-                  <v-text-field label="Email" />
-                  <v-text-field label="Subject" />
-                  <v-textarea label="Message" />
-                  <v-btn large color="green" class="white--text"
-                    >Send Message</v-btn
-                  >
-                </v-form>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="4">
-              <v-card color="transparent" flat>
-                <v-card-title>CONTACT ME</v-card-title>
-                <v-card-text>
-                  4657 Franklin Avenue, ARCH CAPE <br />
-                  +361-883-3218 <br />
-                  hello@jac-co.com <br />
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn
-                    large
-                    elevation="5"
-                    color="pink"
-                    class="white--text mt-10 px-10 py-5"
-                    >Download Resume
-                    <v-icon>mdi-download</v-icon>
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
+        <h4 class="display-2 text-center white--text">Contact</h4>
+        <br />
+        <br />
+        <v-divider></v-divider>
+        <v-row align="center" justify="center">
+          <v-col cols="auto" md="6" class="font-weight-bold py-16">
+            <v-card
+              class="text-center pa-6 rounded-lg"
+              color="#e1e0e0c9"
+              elevation="6"
+            >
+              <v-card-subtitle class="">
+                <v-icon color="#6a66a3" size="40">mdi-account-box</v-icon>
+              </v-card-subtitle>
+              <h2 class="display-1 font-weight-regular">
+                You can contact me <br />from my social networks:
+              </h2>
+              <v-row class="my-7" align="center" justify="center">
+                <v-chip
+                  class="px-4 ma-3"
+                  href="https://www.linkedin.com/in/mateus-marinho-5969231b9/"
+                  dark
+                  color="#3d5a80"
+                >
+                  <v-icon size="20">mdi-linkedin</v-icon>
+                </v-chip>
+                <v-chip
+                  class="px-4 ma-3"
+                  href="https://github.com/marinhomateus"
+                  dark
+                  color="#6b705c"
+                >
+                  <v-icon size="20">mdi-github</v-icon>
+                </v-chip>
+                <v-chip
+                  class="px-4 ma-3"
+                  href="https://twitter.com/maetusx"
+                  dark
+                  color="#f4a261"
+                >
+                  <v-icon size="20">mdi-twitter</v-icon>
+                </v-chip>
+              </v-row>
+              <h2 class="display-1 font-weight-regular">
+                Or by sending me an email:
+              </h2>
+              <v-btn
+                large
+                elevation="5"
+                color="#6a66a3"
+                class="white--text mt-12 px-10 py-5"
+                href="mailto:code.marinho@gmail.com?subject=Contact&body=Hello!"
+              >
+                <v-icon left>mdi-mail</v-icon>
+                mail me
+              </v-btn>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-img>
     </section>
   </div>
@@ -228,14 +273,15 @@ export default {
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg",
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
       ],
-      sliders: [
-        "https://cdn.searchenginejournal.com/wp-content/uploads/2020/01/which-web-design-platform-is-right-for-you-5e4d59fb941b9-1520x800.png",
-        "https://cdn.searchenginejournal.com/wp-content/uploads/2019/12/5-ways-seo-web-design-go-together-5e2945dd5df37.png",
-        "https://data.whicdn.com/images/350420216/original.jpg?t=1605047796",
-        "https://1zylgb20pxi7mw2sdr8i4a14-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/projectleft.jpg",
-        "https://cdn.dribbble.com/users/702789/screenshots/14012516/media/561a8b7e8cbe51c72c18f4ef0dc72676.png?compress=1&resize=400x300",
-        "https://cdn.dribbble.com/users/2399102/screenshots/15522177/media/346d890482d929610d316938e7d48629.png?compress=1&resize=400x300",
+      colors: [
+        "green",
+        "secondary",
+        "yellow darken-4",
+        "red lighten-2",
+        "orange darken-1",
       ],
+      cycle: true,
+      slides: ["First", "Second", "Third", "Fourth", "Fifth"],
     };
   },
   components: {
