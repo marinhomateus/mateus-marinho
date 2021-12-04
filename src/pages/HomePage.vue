@@ -45,56 +45,65 @@
         </v-row>
       </v-parallax>
     </section>
-    <section class="about-me" id="about">
-      <div
-        class="pa-10 grey darken-4"
+    <section class="about" id="about">
+      <v-img
+        class="pa-10"
+        src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg"
         height="400"
-        background="#424242"
-        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+        gradient="to bottom, #181818, #404040"
       >
-        <v-row justify="center" class="align-center">
-          <v-row>
-            <v-col cols="12" md="8">
-              <v-card
-                class="text-center pa-6 rounded-lg"
-                color="#e1e0e0c9"
-                elevation="6"
-              >
-                <v-card-subtitle class="green--text">ABOUT ME</v-card-subtitle>
-                <h2 class="display-1 font-weight-regular">
-                  Evolving in some...
-                </h2>
-                <v-btn
-                  large
-                  elevation="5"
-                  color="pink"
-                  class="white--text mt-10 px-10 py-5"
-                  >Download Resume
-                  <v-icon>mdi-download</v-icon>
-                </v-btn>
-              </v-card>
-            </v-col>
-            <v-col cols="6" md="4">
-              <v-card class="pa-6 rounded-lg" color="#e1e0e0c9" elevation="6">
-                <div class="py-1" v-for="(item, index) in items" :key="index">
-                  <label>{{ item.title }}</label>
-                  <v-progress-linear
-                    :color="item.color"
-                    height="10"
-                    :value="item.value"
-                  ></v-progress-linear>
-                </div>
-              </v-card>
-            </v-col>
-          </v-row>
+        <h4 class="display-2 text-center white--text">About me</h4>
+        <br />
+        <v-row>
+          <v-col cols="12" md="8">
+            <v-card
+              class="text-center pa-6 rounded-lg"
+              color="#e1e0e0c9"
+              elevation="6"
+            >
+              <v-card-subtitle class="">
+                <v-icon size="40">mdi-map-marker-radius-outline</v-icon>
+              </v-card-subtitle>
+              <h2 class="display-1 font-weight-regular">
+                Evolving in some...
+              </h2>
+              <v-btn
+                large
+                elevation="5"
+                color="#f4a261"
+                class="white--text mt-10 px-10 py-5"
+                >Download Resume
+                <v-icon>mdi-download</v-icon>
+              </v-btn>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="4">
+            <v-card class="pa-6 rounded-lg" color="#e1e0e0c9" elevation="6">
+              <div class="py-1" v-for="(item, index) in items" :key="index">
+                <label>{{ item.title }}</label>
+                <v-progress-linear
+                  :color="item.color"
+                  height="10"
+                  :value="item.value"
+                ></v-progress-linear>
+              </div>
+            </v-card>
+          </v-col>
         </v-row>
-      </div>
+      </v-img>
     </section>
-    <section class="portfolio">
-      <div class="pa-5 grey darken-3" style="height: 80vh">
+    <section class="projects" id="projects">
+      <v-img
+        class="pa-10"
+        src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg"
+        height="400"
+        gradient="to bottom, #404040, #616161"
+        style="height: 80vh"
+      >
         <v-row align="center" justify="center">
           <v-col class="">
-            <h4 class="display-2 text-center">Portfolio</h4>
+            <h4 class="display-2 text-center white--text">Projects</h4>
+            <br />
             <v-divider></v-divider>
             <v-slide-group class="pa-4" active-class="success" show-arrows>
               <v-slide-item v-for="(slider, index) in sliders" :key="index">
@@ -105,49 +114,60 @@
             </v-slide-group>
           </v-col>
         </v-row>
-      </div>
+      </v-img>
     </section>
-    <section class="contact-us pt-10">
-      <div>
-        <h4 class="display-1 text-center mb-5">
-          I’m a designer, based in San Francisco. Currently a freelancer. You
-          can see my hobbies on @Jack-Co and some photos on me too.
-        </h4>
-        <v-divider />
-        <br />
-        <v-row>
-          <v-col cols="12" lg="6">
-            <v-card-title>DROP A LINE</v-card-title>
-            <v-form>
-              <v-text-field label="Your Name" />
-              <v-text-field label="Email" />
-              <v-text-field label="Subject" />
-              <v-textarea label="Message" />
-              <v-btn large color="green" class="white--text"
-                >Send Message</v-btn
-              >
-            </v-form>
-          </v-col>
-          <v-col cols="12" lg="3" offset="2">
-            <v-card-title>CONTACT ME</v-card-title>
-            <v-card-text>
-              4657 Franklin Avenue, ARCH CAPE <br />
-              +361-883-3218 <br />
-              hello@jac-co.com <br />
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                large
-                elevation="5"
-                color="pink"
-                class="white--text mt-10 px-10 py-5"
-                >Download Resume
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-col>
-        </v-row>
-      </div>
+    <section class="contact" id="contact">
+      <v-img
+        class="pa-10"
+        gradient="to bottom, #616161, #757575"
+        src="https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      >
+        <v-container>
+          <h4 class="display-2 text-center white--text">Contact</h4>
+          <br />
+          <v-divider></v-divider>
+          <br />
+          <h4 class="display-1 text-center white--text">
+            You can contact me by one of my social links or sending an Email.
+          </h4>
+          <v-row>
+            <v-col cols="12" md="8">
+              <v-card color="transparent" flat>
+                <v-card-title>DROP A LINE</v-card-title>
+                <v-form>
+                  <v-text-field label="Your Name" />
+                  <v-text-field label="Email" />
+                  <v-text-field label="Subject" />
+                  <v-textarea label="Message" />
+                  <v-btn large color="green" class="white--text"
+                    >Send Message</v-btn
+                  >
+                </v-form>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card color="transparent" flat>
+                <v-card-title>CONTACT ME</v-card-title>
+                <v-card-text>
+                  4657 Franklin Avenue, ARCH CAPE <br />
+                  +361-883-3218 <br />
+                  hello@jac-co.com <br />
+                </v-card-text>
+                <v-card-actions>
+                  <v-btn
+                    large
+                    elevation="5"
+                    color="pink"
+                    class="white--text mt-10 px-10 py-5"
+                    >Download Resume
+                    <v-icon>mdi-download</v-icon>
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-img>
     </section>
   </div>
 </template>
