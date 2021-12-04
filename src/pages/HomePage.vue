@@ -53,8 +53,10 @@
       >
         <h4 class="display-2 text-center white--text">About me</h4>
         <br />
-        <v-row>
-          <v-col cols="12" md="8">
+        <br />
+        <v-divider></v-divider>
+        <v-row align="center" justify="center">
+          <v-col cols="auto" md="6" class="font-weight-bold py-16">
             <v-card
               class="text-center pa-6 rounded-lg"
               color="#e1e0e0c9"
@@ -66,22 +68,28 @@
                 >
               </v-card-subtitle>
               <h2 class="display-1 font-weight-regular">
-                I am a problem solver based on São Paulo - Brazil who likes to
-                have a good chat and spend my time evolving and improving
-                myself.
+                I am a problem solver ⚙️
+                <br />
+                🇧🇷 based on São Paulo - Brazil
+                <br />
+                who likes to have a good chat and 🗣️
+                <br />
+                🧠 spend my time evolving and improving myself.
               </h2>
               <v-btn
                 large
                 elevation="5"
                 color="#6a66a3"
-                class="white--text mt-10 px-10 py-5"
+                class="white--text mt-12 px-10 py-5"
               >
                 <v-icon left>mdi-text-to-speech</v-icon>
                 contact me
               </v-btn>
             </v-card>
           </v-col>
-          <v-col cols="12" md="4">
+        </v-row>
+        <v-row align="center" justify="center">
+          <v-col cols="auto" md="6" class="font-weight-bold">
             <v-card
               class="text-center pa-6 rounded-lg"
               color="#e1e0e0c9"
@@ -90,14 +98,34 @@
               <v-card-subtitle class="">
                 <v-icon color="#6a66a3" size="40">mdi-graph</v-icon>
               </v-card-subtitle>
-              <div class="py-1" v-for="(item, index) in items" :key="index">
-                <label>{{ item.title }}</label>
-                <v-progress-linear
-                  :color="item.color"
-                  height="10"
-                  :value="item.value"
-                ></v-progress-linear>
-              </div>
+              <v-row>
+                <v-col
+                  v-for="n in stack"
+                  :key="n"
+                  class="d-flex child-flex"
+                  cols="4"
+                >
+                  <v-img
+                    :src="n"
+                    :lazy-src="n"
+                    aspect-ratio="1"
+                    class="transparent"
+                  >
+                    <template v-slot:placeholder>
+                      <v-row
+                        class="fill-height ma-0"
+                        align="center"
+                        justify="center"
+                      >
+                        <v-progress-circular
+                          indeterminate
+                          color="grey lighten-5"
+                        ></v-progress-circular>
+                      </v-row>
+                    </template>
+                  </v-img>
+                </v-col>
+              </v-row>
             </v-card>
           </v-col>
         </v-row>
@@ -188,6 +216,18 @@ import { ParticlesBg } from "particles-bg-vue";
 export default {
   data() {
     return {
+      alignments: ["start", "center", "end"],
+      stack: [
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+      ],
       sliders: [
         "https://cdn.searchenginejournal.com/wp-content/uploads/2020/01/which-web-design-platform-is-right-for-you-5e4d59fb941b9-1520x800.png",
         "https://cdn.searchenginejournal.com/wp-content/uploads/2019/12/5-ways-seo-web-design-go-together-5e2945dd5df37.png",
