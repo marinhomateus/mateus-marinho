@@ -15,8 +15,8 @@
           </template>
 
           <v-list class="grey lighten-3">
-            <v-list-item v-for="item in more" :key="item" to="#">
-              {{ item }}
+            <v-list-item v-for="item in items" :key="item">
+              <v-btn plain :href="item.to">{{ item.name }}</v-btn>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -45,6 +45,11 @@ export default {
   data() {
     return {
       more: ["About", "Projects", "Contact"],
+      items: [
+        { name: "About", to: "#about" },
+        { name: "Projects", to: "#projects" },
+        { name: "Contact", to: "#contact" },
+      ],
     };
   },
 };
