@@ -49,7 +49,6 @@
       <v-img
         class="pa-10"
         src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg"
-        height="400"
         gradient="to bottom, #181818, #404040"
       >
         <h4 class="display-2 text-center white--text">About me</h4>
@@ -62,23 +61,35 @@
               elevation="6"
             >
               <v-card-subtitle class="">
-                <v-icon size="40">mdi-map-marker-radius-outline</v-icon>
+                <v-icon color="#6a66a3" size="40"
+                  >mdi-map-marker-radius-outline</v-icon
+                >
               </v-card-subtitle>
               <h2 class="display-1 font-weight-regular">
-                Evolving in some...
+                I am a problem solver based on São Paulo - Brazil who likes to
+                have a good chat and spend my time evolving and improving
+                myself.
               </h2>
               <v-btn
                 large
                 elevation="5"
-                color="#f4a261"
+                color="#6a66a3"
                 class="white--text mt-10 px-10 py-5"
-                >Download Resume
-                <v-icon>mdi-download</v-icon>
+              >
+                <v-icon left>mdi-text-to-speech</v-icon>
+                contact me
               </v-btn>
             </v-card>
           </v-col>
           <v-col cols="12" md="4">
-            <v-card class="pa-6 rounded-lg" color="#e1e0e0c9" elevation="6">
+            <v-card
+              class="text-center pa-6 rounded-lg"
+              color="#e1e0e0c9"
+              elevation="6"
+            >
+              <v-card-subtitle class="">
+                <v-icon color="#6a66a3" size="40">mdi-graph</v-icon>
+              </v-card-subtitle>
               <div class="py-1" v-for="(item, index) in items" :key="index">
                 <label>{{ item.title }}</label>
                 <v-progress-linear
