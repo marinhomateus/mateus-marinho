@@ -164,19 +164,19 @@
               <v-carousel
                 :continuous="true"
                 :cycle="cycle"
-                :show-arrows="true"
+                :show-arrows="false"
                 hide-delimiter-background
                 delimiter-icon="mdi-minus"
                 height="500"
               >
                 <v-carousel-item
                   v-for="(slide, i) in slides"
-                  href="https://github.com/marinhomateus"
                   :key="i"
+                  :href="slide.to"
                 >
                   <v-sheet :color="colors[i]" height="100%" tile>
                     <v-row class="fill-height" align="center" justify="center">
-                      <div class="text-h2">{{ slide }} Slide</div>
+                      <div style="font-size: 1.8rem">{{ slide.name }}</div>
                     </v-row>
                   </v-sheet>
                 </v-carousel-item>
@@ -288,14 +288,37 @@ export default {
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
       ],
       colors: [
-        "green",
-        "secondary",
-        "yellow darken-4",
-        "red lighten-2",
-        "orange darken-1",
+        "#3d5a80",
+        "#6b705c",
+        "#f4a261",
+        "#907f9f",
+        "#D3AB9E",
+        "#689689",
       ],
       cycle: true,
-      slides: ["First", "Second", "Third", "Fourth", "Fifth"],
+      slides: [
+        { name: "React Orkut", to: "https://github.com/marinhomateus/orkut" },
+        {
+          name: "Vue Todo List",
+          to: "https://github.com/marinhomateus/todo_list",
+        },
+        {
+          name: "Discord Bot",
+          to: "https://github.com/marinhomateus/botdiscord",
+        },
+        {
+          name: "Vue Exchange",
+          to: "https://github.com/marinhomateus/conversor",
+        },
+        {
+          name: "Memory Game",
+          to: "https://github.com/marinhomateus/jogodamemoria",
+        },
+        {
+          name: "My page",
+          to: "https://github.com/marinhomateus/mateus-marinho",
+        },
+      ],
     };
   },
   components: {
